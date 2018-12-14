@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-isabelle = User.create(username: "isabelle", password: "password", password_confirmation: "password")
-john = User.create(username: "john", password: "password", password_confirmation: "password")
-bob = User.create(username: "bob", password: "password", password_confirmation: "password")
-sally = User.create(username: "sally", password: "password", password_confirmation: "password")
+mary = User.create(username: "isabelle", password: "password", password_confirmation: "password", image: "https://pro.findyourtrainer.com/static/images/avatar.jpg" )
+john = User.create(username: "john", password: "password", password_confirmation: "password", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Gilles-Le-Gendre.jpg/1200px-Gilles-Le-Gendre.jpg")
+bob = User.create(username: "bob", password: "password", password_confirmation: "password", image: "https://engineering.unl.edu/images/staff/Kayla_Person-small.jpg")
+sally = User.create(username: "sally", password: "password", password_confirmation: "password", image: "https://fortunedotcom.files.wordpress.com/2018/07/gettyimages-961697338.jpg")
 
 friend1 = Friendship.create(user_id: 1, friend_id: 2, confirmed: true)
 friend2 = Friendship.create(user_id: 2, friend_id: 3, confirmed: true)

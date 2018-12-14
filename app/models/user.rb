@@ -6,6 +6,8 @@ class User < ApplicationRecord
   has_many :languages, through: :user_languages
 
   has_many :decks
+  has_many :cards, through: :decks
+  
   has_secure_password
   validates :username, uniqueness: {case_sensitive: false}
 

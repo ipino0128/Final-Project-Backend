@@ -4,7 +4,7 @@ class UsersController < ApplicationController
        token = request.headers['Authentication'].split(' ')[1]
        payload = decode(token)
        current_user = User.find(payload["user"])
-       render json: { user: current_user }, status: :accepted
+       render json: current_user, status: :accepted
      end
 
      # Sign Up
@@ -29,7 +29,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :password, :password_confirmation)
+    params.require(:user).permit(:username, :password, :password_confirmation, :image)
   end
-  
+
 end
