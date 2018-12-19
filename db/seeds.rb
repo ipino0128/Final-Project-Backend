@@ -8,9 +8,9 @@
 
 
 mary = User.create(username: "isabelle", password: "password", password_confirmation: "password", image: "https://pro.findyourtrainer.com/static/images/avatar.jpg" )
-john = User.create(username: "john", password: "password", password_confirmation: "password", image: "https://assets.rebelcircus.com/blog/wp-content/uploads/2016/05/facebook-avatar.jpg")
-bob = User.create(username: "bob", password: "password", password_confirmation: "password", image: "https://engineering.unl.edu/images/staff/Kayla_Person-small.jpg")
-sally = User.create(username: "sally", password: "password", password_confirmation: "password", image: "https://fortunedotcom.files.wordpress.com/2018/07/gettyimages-961697338.jpg")
+john = User.create(username: "john", password: "password", password_confirmation: "password", image: "http://greensportsalliance.org/images/lightGreenSquare.gif")
+bob = User.create(username: "bob", password: "password", password_confirmation: "password", image: "http://thezilla.com/wp-content/uploads/2015/07/orange.jpg")
+sally = User.create(username: "sally", password: "password", password_confirmation: "password", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Solid_blue.svg/225px-Solid_blue.svg.png")
 
 friend1 = Friendship.create(user_id: 1, friend_id: 2, confirmed: true)
 friend2 = Friendship.create(user_id: 2, friend_id: 3, confirmed: true)
