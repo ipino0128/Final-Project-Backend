@@ -1,6 +1,10 @@
 class DecksController < ApplicationController
+  # before_action :authorized
+  skip_before_action :authorized, only: [:index]
   def index
-    render json: Deck.all
+    # byebug
+    @decks= {decks: Deck.where(user_id: current_user.id)}
+    render json: @decks
   end
 
   def show

@@ -8,7 +8,7 @@
 
 
 mary = User.create(username: "isabelle", password: "password", password_confirmation: "password", image: "https://pro.findyourtrainer.com/static/images/avatar.jpg" )
-john = User.create(username: "john", password: "password", password_confirmation: "password", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Gilles-Le-Gendre.jpg/1200px-Gilles-Le-Gendre.jpg")
+john = User.create(username: "john", password: "password", password_confirmation: "password", image: "https://assets.rebelcircus.com/blog/wp-content/uploads/2016/05/facebook-avatar.jpg")
 bob = User.create(username: "bob", password: "password", password_confirmation: "password", image: "https://engineering.unl.edu/images/staff/Kayla_Person-small.jpg")
 sally = User.create(username: "sally", password: "password", password_confirmation: "password", image: "https://fortunedotcom.files.wordpress.com/2018/07/gettyimages-961697338.jpg")
 

@@ -7,14 +7,14 @@ class User < ApplicationRecord
 
   has_many :decks
   has_many :cards, through: :decks
-  
+
   has_secure_password
   validates :username, uniqueness: {case_sensitive: false}
 
   # all the other users who are connected to the given user via a confirmed friendship/ confirmed inverse friendship
   def friends
     friends_array = friendships.map{|friendship| friendship.friend if friendship.confirmed}
-    friends_array + inverse_friendships.map{|friendship| friendship.user if friendship.confirmed}
+    friends_array += inverse_friendships.map{|friendship| friendship.user if friendship.confirmed}
     friends_array.compact
   end
 

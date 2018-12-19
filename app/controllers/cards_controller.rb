@@ -1,4 +1,5 @@
 class CardsController < ApplicationController
+    skip_before_action :authorized, only: [:index]
   def index
     render json: Card.all
   end
@@ -14,6 +15,6 @@ class CardsController < ApplicationController
   private
 
   def card_params
-    params.require(:card).permit(:front, :back)
+    params.require(:card).permit(:front, :back, :deck_id)
   end
 end

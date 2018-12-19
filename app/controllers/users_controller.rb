@@ -1,20 +1,19 @@
 class UsersController < ApplicationController
-  def profile
-       #if the front end has a token, we send back @user
-       token = request.headers['Authentication'].split(' ')[1]
-       payload = decode(token)
-       current_user = User.find(payload["user"])
-       render json: current_user, status: :accepted
-     end
+   before_action :authorized, only: [:profile]
+
+   def profile
+     render json: { user: UserSerializer.new(current_user) }, status: :accepted
+   end
 
      # Sign Up
    def create
      @user = User.create(user_params)
-     if @user.valid?
-       render json: { user: UserSerializer.new(@user) }, status: :created
-     else
-       render json: { error: 'failed to create user' }, status: :not_acceptable
-     end
+    if @user.valid?
+      @token = encode_token(user_id: @user.id)
+      render json: { user: UserSerializer.new(@user), jwt: @token }, status: :created
+    else
+      render json: { error: 'failed to create user' }, status: :not_acceptable
+    end
    end
 
 
