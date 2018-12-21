@@ -2,8 +2,7 @@ class UsersController < ApplicationController
    before_action :authorized, only: [:profile, :show]
 
    def profile
-     byebug
-     render json: { user: current_user }, status: :accepted
+     render json: {user: UserSerializer.new(current_user)}, status: :accepted
    end
 
      # Sign Up

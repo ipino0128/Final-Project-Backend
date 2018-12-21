@@ -1,4 +1,6 @@
 class LanguagesController < ApplicationController
+  skip_before_action :authorized, only: [:index, :show]
+
   def index
     render json: Language.all
   end
@@ -14,6 +16,6 @@ class LanguagesController < ApplicationController
   private
 
   def language_params
-    params.require(:language).permit(:name)
+    params.require(:language).permit(:name, :nativeName)
   end
 end

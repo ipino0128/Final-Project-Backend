@@ -1,3 +1,3 @@
 class LanguageSerializer < ActiveModel::Serializer
-  attributes :id, :name, :users, :user_languages
+  attributes :id, :name, :nativeName, :decks
 end

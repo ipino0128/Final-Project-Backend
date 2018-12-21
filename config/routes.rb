@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :user_languages
   resources :decks
   resources :cards
+  resources :favorite_decks
   post '/login', to: 'auth#create'
   get '/profile', to: 'users#profile'
 end

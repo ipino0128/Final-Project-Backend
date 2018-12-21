@@ -8,6 +8,8 @@ class User < ApplicationRecord
   has_many :decks
   has_many :cards, through: :decks
 
+  has_many :favorite_decks
+
   has_secure_password
   validates :username, uniqueness: {case_sensitive: false}
 
