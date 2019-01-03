@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2018_12_21_223413) do
 
   create_table "decks", force: :cascade do |t|
     t.string "name"
+    t.string "description"
     t.integer "user_id"
     t.integer "language_id"
     t.datetime "created_at", null: false
@@ -34,6 +35,7 @@ ActiveRecord::Schema.define(version: 2018_12_21_223413) do
   create_table "favorite_decks", force: :cascade do |t|
     t.integer "user_id"
     t.integer "deck_id"
+    t.boolean "favorited", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -67,6 +69,8 @@ ActiveRecord::Schema.define(version: 2018_12_21_223413) do
     t.string "username"
     t.string "password_digest"
     t.string "image"
+    t.string "coverphoto"
+    t.string "bio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

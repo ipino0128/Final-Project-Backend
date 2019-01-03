@@ -1,5 +1,5 @@
 class DeckSerializer < ActiveModel::Serializer
-  attributes :id, :name, :cards, :user_id, :language_id
+  attributes :id, :name, :description, :cards, :user_id, :language_id
 
    def cards
      object.cards.map do |card|

@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-mary = User.create(username: "isabelle", password: "password", password_confirmation: "password", image: "https://pro.findyourtrainer.com/static/images/avatar.jpg" )
-john = User.create(username: "john", password: "password", password_confirmation: "password", image: "http://greensportsalliance.org/images/lightGreenSquare.gif")
-bob = User.create(username: "bob", password: "password", password_confirmation: "password", image: "http://thezilla.com/wp-content/uploads/2015/07/orange.jpg")
-sally = User.create(username: "sally", password: "password", password_confirmation: "password", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Solid_blue.svg/225px-Solid_blue.svg.png")
+mary = User.create(username: "isabelle", password: "password", password_confirmation: "password", image: "https://pro.findyourtrainer.com/static/images/avatar.jpg", coverphoto: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlLOGsWxqAZGjKm8C2BxI2w4kNw_CcQg8wJqRaqKKcdQPhlUJU", bio: "hello there i'm isabelle")
+john = User.create(username: "john", password: "password", password_confirmation: "password", image: "http://greensportsalliance.org/images/lightGreenSquare.gif", coverphoto: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlLOGsWxqAZGjKm8C2BxI2w4kNw_CcQg8wJqRaqKKcdQPhlUJU", bio: "hello there i'm john")
+bob = User.create(username: "bob", password: "password", password_confirmation: "password", image: "http://thezilla.com/wp-content/uploads/2015/07/orange.jpg", coverphoto: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlLOGsWxqAZGjKm8C2BxI2w4kNw_CcQg8wJqRaqKKcdQPhlUJU", bio: "hello there i'm bob")
+sally = User.create(username: "sally", password: "password", password_confirmation: "password", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Solid_blue.svg/225px-Solid_blue.svg.png", coverphoto: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlLOGsWxqAZGjKm8C2BxI2w4kNw_CcQg8wJqRaqKKcdQPhlUJU", bio: "hello there i'm sally")
 
 friend1 = Friendship.create(user_id: 1, friend_id: 2, confirmed: true)
 friend2 = Friendship.create(user_id: 2, friend_id: 3, confirmed: true)
@@ -759,17 +759,17 @@ UserLanguage.create(user_id: 3, language_id: 73, proficiency: "intermediate")
 UserLanguage.create(user_id: 3, language_id: 52, proficiency: "advanced")
 UserLanguage.create(user_id: 4, language_id: 48, proficiency: "intermediate")
 
-Deck.create(name: "spanish animals", user_id: 2, language_id: 149)
-Deck.create(name: "transportation", user_id: 1, language_id: 73)
-Deck.create(name: "weather", user_id: 3, language_id: 52)
-Deck.create(name: "numbers in french", user_id: 4, language_id: 48)
+Deck.create(name: "spanish animals", description: "sldjfksdfjlsdflkds", user_id: 2, language_id: 149)
+Deck.create(name: "transportation", description: "sldjfksdfjlsdflkds", user_id: 1, language_id: 73)
+Deck.create(name: "weather", description: "sldjfksdfjlsdflkds", user_id: 3, language_id: 52)
+Deck.create(name: "numbers in french", description: "sldjfksdfjlsdflkds", user_id: 4, language_id: 48)
 
 Card.create(front: "cat", back: "gato", deck_id: 1)
 Card.create(front: "car", back: "backside of car", deck_id: 2)
 Card.create(front: "storm", back: "backside of storm", deck_id: 3)
 Card.create(front: "number", back: "backside of number", deck_id: 4)
 
-FavoriteDeck.create(user_id: 1, deck_id: 1)
-FavoriteDeck.create(user_id: 1, deck_id: 3)
-FavoriteDeck.create(user_id: 1, deck_id: 4)
-FavoriteDeck.create(user_id: 2, deck_id: 4)
+
+
+FavoriteDeck.create(user_id: 1, deck_id: 4, favorited: true)
+FavoriteDeck.create(user_id: 2, deck_id: 4, favorited: true)
