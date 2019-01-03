@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-mary = User.create(username: "isabelle", password: "password", password_confirmation: "password", image: "https://pro.findyourtrainer.com/static/images/avatar.jpg", coverphoto: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlLOGsWxqAZGjKm8C2BxI2w4kNw_CcQg8wJqRaqKKcdQPhlUJU", bio: "hello there i'm isabelle")
-john = User.create(username: "john", password: "password", password_confirmation: "password", image: "http://greensportsalliance.org/images/lightGreenSquare.gif", coverphoto: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlLOGsWxqAZGjKm8C2BxI2w4kNw_CcQg8wJqRaqKKcdQPhlUJU", bio: "hello there i'm john")
-bob = User.create(username: "bob", password: "password", password_confirmation: "password", image: "http://thezilla.com/wp-content/uploads/2015/07/orange.jpg", coverphoto: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlLOGsWxqAZGjKm8C2BxI2w4kNw_CcQg8wJqRaqKKcdQPhlUJU", bio: "hello there i'm bob")
-sally = User.create(username: "sally", password: "password", password_confirmation: "password", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Solid_blue.svg/225px-Solid_blue.svg.png", coverphoto: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlLOGsWxqAZGjKm8C2BxI2w4kNw_CcQg8wJqRaqKKcdQPhlUJU", bio: "hello there i'm sally")
+isabelle = User.create(username: "isabelle", password: "password", password_confirmation: "password", image: "https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/13344635_10204980443711373_3339335407303886118_n.jpg?_nc_cat=100&_nc_ht=scontent-iad3-1.xx&oh=a5d7fd2c67b2edcac7d48c0532cc7fb5&oe=5C8C1D95", coverphoto: "https://www.sunset.com/wp-content/uploads/97cc1a4f0006ff15aca8dc3a0d01860d-800x0-c-default.jpg", bio: "hello there i'm isabelle")
+john = User.create(username: "john", password: "password", password_confirmation: "password", image: "https://semantic-ui.com/images/avatar/large/christian.jpg", coverphoto: "https://media.istockphoto.com/photos/blue-background-picture-id518094392?k=6&m=518094392&s=612x612&w=0&h=UocCMwE-wD8anw0M8vpT98P4yr8Pe3VhBJ1oMvm_gqA=", bio: "hello there i'm john")
+bob = User.create(username: "bob", password: "password", password_confirmation: "password", image: "https://semantic-ui.com/images/avatar/large/joe.jpg", coverphoto: "http://colorfully.eu/wp-content/uploads/2013/01/headphones-facebook-cover.jpg", bio: "hello there i'm bob")
+sally = User.create(username: "sally", password: "password", password_confirmation: "password", image: "https://semantic-ui.com/images/avatar/large/stevie.jpg", coverphoto: "https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?cs=srgb&dl=hd-wallpaper-mountain-range-mountains-114979.jpg&fm=jpg", bio: "hello there i'm sally")
 
 friend1 = Friendship.create(user_id: 1, friend_id: 2, confirmed: true)
 friend2 = Friendship.create(user_id: 2, friend_id: 3, confirmed: true)
@@ -224,7 +224,7 @@ Language.create([
         nativeName:"Deutsch"
     },
     {
-        name:"Greek, Modern",
+        name:"Greek",
         nativeName:"Ελληνικά"
     },
     {
@@ -236,7 +236,7 @@ Language.create([
         nativeName:"ગુજરાતી"
     },
     {
-        name:"Haitian; Haitian Creole",
+        name:"Haitian",
         nativeName:"Kreyòl ayisyen"
     },
     {
@@ -752,17 +752,17 @@ Language.create([
       ])
 
 
-UserLanguage.create(user_id: 1, language_id: 48, proficiency: "advanced")
-UserLanguage.create(user_id: 2, language_id: 149, proficiency: "beginner")
-UserLanguage.create(user_id: 1, language_id: 149, proficiency: "beginner")
-UserLanguage.create(user_id: 3, language_id: 73, proficiency: "intermediate")
-UserLanguage.create(user_id: 3, language_id: 52, proficiency: "advanced")
-UserLanguage.create(user_id: 4, language_id: 48, proficiency: "intermediate")
+UserLanguage.create(user_id: 1, language_id: 47, proficiency: "advanced")
+UserLanguage.create(user_id: 2, language_id: 148, proficiency: "beginner")
+UserLanguage.create(user_id: 1, language_id: 148, proficiency: "beginner")
+UserLanguage.create(user_id: 3, language_id: 72, proficiency: "intermediate")
+UserLanguage.create(user_id: 3, language_id: 51, proficiency: "advanced")
+UserLanguage.create(user_id: 4, language_id: 47, proficiency: "intermediate")
 
-Deck.create(name: "spanish animals", description: "sldjfksdfjlsdflkds", user_id: 2, language_id: 149)
-Deck.create(name: "transportation", description: "sldjfksdfjlsdflkds", user_id: 1, language_id: 73)
-Deck.create(name: "weather", description: "sldjfksdfjlsdflkds", user_id: 3, language_id: 52)
-Deck.create(name: "numbers in french", description: "sldjfksdfjlsdflkds", user_id: 4, language_id: 48)
+Deck.create(name: "spanish animals", description: "sldjfksdfjlsdflkds", user_id: 2, language_id: 148)
+Deck.create(name: "transportation", description: "sldjfksdfjlsdflkds", user_id: 1, language_id: 72)
+Deck.create(name: "weather", description: "sldjfksdfjlsdflkds", user_id: 3, language_id: 51)
+Deck.create(name: "numbers in french", description: "sldjfksdfjlsdflkds", user_id: 4, language_id: 47)
 
 Card.create(front: "cat", back: "gato", deck_id: 1)
 Card.create(front: "car", back: "backside of car", deck_id: 2)
